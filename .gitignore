@@ -1,7 +1,5 @@
 $ cat .gitignore
 
-/Temp
-#Library/
-#Library/*[a-z]
-#/Library/*/*
+Temp/
+Library/
 
