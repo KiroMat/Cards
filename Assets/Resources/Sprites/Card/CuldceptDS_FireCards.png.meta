@@ -1,0 +1,633 @@
+fileFormatVersion: 2
+guid: 4c953877759fcdc48aaffba1a8c8411e
+timeCreated: 1458472846
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: CuldceptDS_FireCards_0
+    21300002: CuldceptDS_FireCards_1
+    21300004: CuldceptDS_FireCards_2
+    21300006: CuldceptDS_FireCards_3
+    21300008: CuldceptDS_FireCards_4
+    21300010: CuldceptDS_FireCards_5
+    21300012: CuldceptDS_FireCards_6
+    21300014: CuldceptDS_FireCards_7
+    21300016: CuldceptDS_FireCards_8
+    21300018: CuldceptDS_FireCards_9
+    21300020: CuldceptDS_FireCards_10
+    21300022: CuldceptDS_FireCards_11
+    21300024: CuldceptDS_FireCards_12
+    21300026: CuldceptDS_FireCards_13
+    21300028: CuldceptDS_FireCards_14
+    21300030: CuldceptDS_FireCards_15
+    21300032: CuldceptDS_FireCards_16
+    21300034: CuldceptDS_FireCards_17
+    21300036: CuldceptDS_FireCards_18
+    21300038: CuldceptDS_FireCards_19
+    21300040: CuldceptDS_FireCards_20
+    21300042: CuldceptDS_FireCards_21
+    21300044: CuldceptDS_FireCards_22
+    21300046: CuldceptDS_FireCards_23
+    21300048: CuldceptDS_FireCards_24
+    21300050: CuldceptDS_FireCards_25
+    21300052: CuldceptDS_FireCards_26
+    21300054: CuldceptDS_FireCards_27
+    21300056: CuldceptDS_FireCards_28
+    21300058: CuldceptDS_FireCards_29
+    21300060: CuldceptDS_FireCards_30
+    21300062: CuldceptDS_FireCards_31
+    21300064: CuldceptDS_FireCards_32
+    21300066: CuldceptDS_FireCards_33
+    21300068: CuldceptDS_FireCards_34
+    21300070: CuldceptDS_FireCards_35
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: CuldceptDS_FireCards_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 879
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_1
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 879
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_2
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 879
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_3
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 879
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_4
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 879
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_5
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 879
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_6
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 714
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_7
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 714
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_8
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 714
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_9
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 714
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_10
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 714
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_11
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 714
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_12
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 549
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_13
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 549
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_14
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 549
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_15
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 549
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_16
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 549
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_17
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 549
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_18
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 384
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_19
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 384
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_20
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 384
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_21
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 384
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_22
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 384
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_23
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 384
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_24
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 219
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_25
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 219
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_26
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 219
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_27
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 219
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_28
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 219
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_29
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 219
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_30
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 54
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_31
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 54
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_32
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 54
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_33
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 54
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_34
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 54
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    - name: CuldceptDS_FireCards_35
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 54
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54, y: 62}
+        - {x: -54, y: -62}
+        - {x: 54, y: -62}
+        - {x: 54, y: 62}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
