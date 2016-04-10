@@ -32,12 +32,12 @@ public class Card : MonoBehaviour {
     }
     public int LeftNumerValue
     {
-        get { return int.Parse(LeftNumber.GetComponent<Text>().text; }
+        get { return int.Parse(LeftNumber.GetComponent<Text>().text); }
         set { LeftNumber.GetComponent<Text>().text = value.ToString(); }
     }
     public int RightNumerValue
     {
-        get { return int.Parse(RightNumber.GetComponent<Text>().text; }
+        get { return int.Parse(RightNumber.GetComponent<Text>().text); }
         set { RightNumber.GetComponent<Text>().text = value.ToString(); }
     }
     //setter & getter for Name of the card
