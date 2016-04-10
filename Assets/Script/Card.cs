@@ -20,70 +20,51 @@ public class Card : MonoBehaviour {
     #endregion
     #region Setters&Getters
     //getters for numbers
-    public int GetTopNumber()
+    public int TopNumerValue
     {
-        return int.Parse(TopNumber.GetComponent<Text>().text);
+        get { return int.Parse(TopNumber.GetComponent<Text>().text); }
+        set { TopNumber.GetComponent<Text>().text = value.ToString(); }
     }
-    public int GetBottNumber()
+    public int BottNumerValue
     {
-        return int.Parse(BottNumber.GetComponent<Text>().text);
+        get { return int.Parse(BottNumber.GetComponent<Text>().text); }
+        set { BottNumber.GetComponent<Text>().text = value.ToString(); }
     }
-    public int GetLeftNumber()
+    public int LeftNumerValue
     {
-        return int.Parse(LeftNumber.GetComponent<Text>().text);
+        get { return int.Parse(LeftNumber.GetComponent<Text>().text; }
+        set { LeftNumber.GetComponent<Text>().text = value.ToString(); }
     }
-    public int GetRightNumber()
+    public int RightNumerValue
     {
-        return int.Parse(RightNumber.GetComponent<Text>().text);
-    }
-    //setters for numbers
-    public void SetTopNumber(int number)
-    {
-        TopNumber.GetComponent<Text>().text = number.ToString();
-    }
-    public void SetBottNumber(int number)
-    {
-        BottNumber.GetComponent<Text>().text = number.ToString();
-    }
-    public void SetLeftNumber(int number)
-    {
-        LeftNumber.GetComponent<Text>().text = number.ToString();
-    }
-    public void SetRightNumber(int number)
-    {
-        RightNumber.GetComponent<Text>().text = number.ToString();
+        get { return int.Parse(RightNumber.GetComponent<Text>().text; }
+        set { RightNumber.GetComponent<Text>().text = value.ToString(); }
     }
     //setter & getter for Name of the card
-    public void SetCardName(string name)
+    public string CardName
     {
-        Name.GetComponent<Text>().text = name;
+        get { return Name.GetComponent<Text>().text; }
+        set { Name.GetComponent<Text>().text = value; }
     }
-    public string GetCardName()
-    {
-        return Name.GetComponent<Text>().text;
-    }
+
     //setters for AvatarImage, background and Shield
-    public void SetAvatarImage(Sprite image)
+    public Sprite AvatarImg
     {
-        AvatarImage.GetComponent<Image>().sprite = image;
+        set { AvatarImage.GetComponent<Image>().sprite = value; }
     }
-    public void SetBackgroundImage(Sprite image)
+    public Sprite BackgroundImg
     {
-        Background.GetComponent<Image>().sprite = image;
+        set { Background.GetComponent<Image>().sprite = value; }
     }
-    public void SetShieldImage(Sprite image)
+    public Sprite ShieldImg
     {
-        Shield.GetComponent<Image>().sprite = image;
+        set { Shield.GetComponent<Image>().sprite = value; }
     }
     #endregion
 
     #region UnityMethods
     // Use this for initialization
     void Start () {
-        Debug.Log(GetCardName());
-        SetCardName("Laps");
-        Debug.Log(GetCardName());
-        SetAvatarImage(blueShield);
     }
 	
 	// Update is called once per frame
