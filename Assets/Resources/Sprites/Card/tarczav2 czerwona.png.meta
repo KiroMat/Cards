@@ -1,0 +1,83 @@
+fileFormatVersion: 2
+guid: daaa94cde67961844ba8ae32a170d364
+timeCreated: 1459448425
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: tarczav2 czerwona_0
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 256
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 291, y: 203, z: 286, w: 142}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: tarczav2 czerwona_0
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 208
+        width: 987
+        height: 1151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -76.278305, y: 92.83962}
+        - {x: -81.278305, y: 80.83962}
+        - {x: -81.278305, y: -5.1603775}
+        - {x: -79.278305, y: -19.160378}
+        - {x: -30.278305, y: -84.16038}
+        - {x: -16.278305, y: -95.16038}
+        - {x: 24.721695, y: -95.16038}
+        - {x: 82.721695, y: -29.160378}
+        - {x: 82.721695, y: 75.83962}
+        - {x: 79.721695, y: 92.83962}
+    outline:
+    - - {x: 0, y: 0}
+      - {x: 0, y: 1484}
+      - {x: 1550, y: 1484}
+      - {x: 1550, y: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

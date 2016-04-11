@@ -1,0 +1,78 @@
+fileFormatVersion: 2
+guid: 53faff17434880a489c7ecc76e6cbd83
+timeCreated: 1460214936
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: tarczav2 niebieska_0
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 256
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: tarczav2 niebieska_0
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 208
+        width: 958
+        height: 1119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -79.13207, y: 93.33962}
+        - {x: -79.13207, y: -2.6603775}
+        - {x: -56.132072, y: -53.660378}
+        - {x: -30.132072, y: -80.66038}
+        - {x: -5.1320724, y: -92.66038}
+        - {x: 13.867928, y: -92.66038}
+        - {x: 56.867928, y: -53.660378}
+        - {x: 80.86793, y: -5.6603775}
+        - {x: 80.86793, y: 93.33962}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
