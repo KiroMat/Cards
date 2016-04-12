@@ -67,6 +67,7 @@
     <Compile Include="Assets\Script\Camera.cs" />
     <Compile Include="Assets\Script\Card.cs" />
     <Compile Include="Assets\Script\MenuPanelActivation.cs" />
+    <Compile Include="Assets\Script\ParticleSystemMultiplier.cs" />
     <Compile Include="Assets\Script\Player.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
