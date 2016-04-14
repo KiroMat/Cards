@@ -66,6 +66,7 @@
     <Compile Include="Assets\Script\AreaFields.cs" />
     <Compile Include="Assets\Script\Camera.cs" />
     <Compile Include="Assets\Script\Card.cs" />
+    <Compile Include="Assets\Script\Hand.cs" />
     <Compile Include="Assets\Script\MenuPanelActivation.cs" />
     <Compile Include="Assets\Script\ParticleSystemMultiplier.cs" />
     <Compile Include="Assets\Script\Player.cs" />
