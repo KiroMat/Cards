@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.EventSystems;
 using System;
+using UnityEngine.UI;
 
 public class Card : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
 {
@@ -67,25 +67,19 @@ public class Card : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
     #endregion
 
     #region UnityMethods
-    // Use this for initialization
-    void Start () {
-    }
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
+ 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("Wejście");
-        handReference.CardOnTop(this.gameObject);
+        
+
+
+        //handReference.CardOnTop(this.gameObject);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("Wyjscie");
-        handReference.BackToPreviousOrder();
+    
+        //handReference.BackToPreviousOrder();
     }
     #endregion
 
