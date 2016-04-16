@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.EventSystems;
+using System;
 
-public class Card : MonoBehaviour {
+public class Card : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
+{
 
     #region CardElementsReferences
     public GameObject Shield;
@@ -71,5 +74,16 @@ public class Card : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        Debug.Log("Wejście");
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        Debug.Log("Wyjscie");
+    }
     #endregion
+
 }
