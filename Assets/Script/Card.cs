@@ -16,6 +16,7 @@ public class Card : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
     public GameObject BottNumber;
     public GameObject LeftNumber;
     public GameObject RightNumber;
+    public Hand handReference;
     #endregion
     #region ResourcesReferences
     public Sprite redShield;
@@ -78,11 +79,13 @@ public class Card : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
     public void OnPointerEnter(PointerEventData eventData)
     {
         Debug.Log("Wejście");
+        handReference.CardOnTop(this.gameObject);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         Debug.Log("Wyjscie");
+        handReference.BackToPreviousOrder();
     }
     #endregion
 
