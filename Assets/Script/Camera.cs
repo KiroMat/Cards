@@ -102,10 +102,11 @@ public class Camera : MonoBehaviour {
 
             if (!Input.GetMouseButton(1)) return;
 
-            Vector3 pos = transform.TransformPoint(Input.mousePosition-dragOrigin);
-            Vector3 move = new Vector3(pos.x * _ScrollSpeed, pos.y * _ScrollSpeed, this.transform.position.z);
+            Vector3 pos = Input.mousePosition-dragOrigin;
+            Debug.Log("DragOrigin: "+dragOrigin+" mousePosition: "+Input.mousePosition+"DeltaVector: "+(pos));
+            Vector3 move = new Vector3(pos.x * _MoveSpeed/100, pos.y * _MoveSpeed/100, this.transform.position.z);
 
-            transform.Translate(move, Space.World);
+            transform.Translate(pos, Space.World);
         }
     }
 }
