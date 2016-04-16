@@ -3,31 +3,34 @@ using System.Collections;
 
 public class Camera : MonoBehaviour {
 
-	public float _MoveSpeed=20;
-	public float _ScrollSpeed=5;
+    public float _MoveSpeed = 20;
+    public float _ScrollSpeed = 5;
     public float _InitialZoom = -300;
-	private int _Border =1;
-    public bool _BorderScrollingEnabled = false;
+    private int _Border = 1;
+    public bool _BorderScrollingEnabled;
     public bool _ZoomScrollingEnabled = true;
     public bool _KeyboardCameraScrolling = true;
+    public bool _CameraDragEnabled;
     public float _InitialStartingX = 330;
     public float _InitialStartingY = 250;
-	private float _zoomInLimit=-200;
-	private float _zoomOutLimit=-900;
+    private float _zoomInLimit = -200;
+    private float _zoomOutLimit = -900;
+    private Vector3 dragOrigin;
 
-	// Use this for initialization
-	void Start () {
-		transform.position=new Vector3(_InitialStartingX,_InitialStartingY,_InitialZoom);
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    // Use this for initialization
+    void Start() {
+        transform.position = new Vector3(_InitialStartingX, _InitialStartingY, _InitialZoom);
+    }
+
+    // Update is called once per frame
+    void Update() {
         BorderScrolling();
         ZoomScrolling();
         CameraScrollingKeyboard();
-	}
+        CameraDrag();
+    }
 
-    public void ZoomScrolling()
+    private void ZoomScrolling()
     {
         if (_ZoomScrollingEnabled)
         {
@@ -45,7 +48,7 @@ public class Camera : MonoBehaviour {
             }
         }
     }
-    public void CameraScrollingKeyboard()
+    private void CameraScrollingKeyboard()
     {
         if (_KeyboardCameraScrolling)
         {
@@ -53,17 +56,16 @@ public class Camera : MonoBehaviour {
             var AxisY = Input.GetAxis("Vertical");
             if (AxisX != 0)
             {
-                transform.Translate(Vector3.right * AxisX*1000 * Time.deltaTime, Space.World);
+                transform.Translate(Vector3.right * AxisX * 1000 * Time.deltaTime, Space.World);
             }
             if (AxisY != 0)
             {
-                transform.Translate(Vector3.up * AxisY* 1000 * Time.deltaTime, Space.World);
+                transform.Translate(Vector3.up * AxisY * 1000 * Time.deltaTime, Space.World);
             }
 
         }
     }
-
-    public void BorderScrolling()
+    private void BorderScrolling()
     {
         if (_BorderScrollingEnabled)
         {
@@ -87,4 +89,24 @@ public class Camera : MonoBehaviour {
             }
         }
     }
+    private void CameraDrag()
+    {
+        if (_CameraDragEnabled)
+        {
+           
+            if (Input.GetMouseButtonDown(1))
+            {
+                dragOrigin = Input.mousePosition;
+                return;
+            }
+
+            if (!Input.GetMouseButton(1)) return;
+
+            Vector3 pos = transform.TransformPoint(Input.mousePosition-dragOrigin);
+            Vector3 move = new Vector3(pos.x * _ScrollSpeed, pos.y * _ScrollSpeed, this.transform.position.z);
+
+            transform.Translate(move, Space.World);
+        }
+    }
 }
+
