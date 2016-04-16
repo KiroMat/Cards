@@ -63,13 +63,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Presentation\Carddd.cs" />
+    <Compile Include="Assets\Presentation\Field.cs" />
+    <Compile Include="Assets\Presentation\Slot.cs" />
     <Compile Include="Assets\Script\AreaFields.cs" />
     <Compile Include="Assets\Script\Camera.cs" />
     <Compile Include="Assets\Script\Card.cs" />
     <Compile Include="Assets\Script\Hand.cs" />
-    <Compile Include="Assets\Script\ParticleSystemMultiplier.cs" />
     <Compile Include="Assets\Script\MechanismsForGame\GeneratorCards.cs" />
     <Compile Include="Assets\Script\MechanismsForGame\MenuPanelActivation.cs" />
+    <Compile Include="Assets\Script\ParticleSystemMultiplier.cs" />
     <Compile Include="Assets\Script\Player.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
