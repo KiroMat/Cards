@@ -7,19 +7,21 @@ public class Hand : MonoBehaviour {
 
     public Transform emptySlot;
     private Transform lastCardOnTop;
-    public List<Card> cardsInHand = new List<Card>();
-    public Hand()
-    {
+    public List<GameObject> cardsInHand = new List<GameObject>();
 
-    }
-    public Hand(List<Card> cardsList)
+    void Start()
     {
-        cardsInHand = cardsList;
-    }
+        var gen = GameObject.FindGameObjectWithTag("CardGenerator").GetComponent<GeneratorCards>();
+        if(gen != null)
+        {
+            cardsInHand = gen.GetListOfCards();
 
-    //change hoveredOver layout element to ignore
-    //replace hoveredOver place in hierarchy by emptySlot
-    //after mouseExit revert ->set emptySlot as last and hoveredOver as emptySlot
+            foreach (var item in cardsInHand)
+            {
+                item.transform.parent = transform;
+            }
+        }
+    }
 
 
 

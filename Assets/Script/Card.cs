@@ -8,15 +8,14 @@ public class Card : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
 {
 
     #region CardElementsReferences
-    public GameObject Shield;
-    public GameObject Background;
-    public GameObject AvatarImage;
-    public GameObject Name;
-    public GameObject TopNumber;
-    public GameObject BottNumber;
-    public GameObject LeftNumber;
-    public GameObject RightNumber;
-    public Hand handReference;
+    public GameObject ShieldPref;
+    public GameObject BackgroundPref;
+    public GameObject AvatarImagePref;
+    public GameObject NamePref;
+    public GameObject TopNumberPref;
+    public GameObject BottNumberPref;
+    public GameObject LeftNumberPref;
+    public GameObject RightNumberPref;
     #endregion
     #region ResourcesReferences
     public Sprite redShield;
@@ -26,43 +25,43 @@ public class Card : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
     //getters for numbers
     public int TopNumerValue
     {
-        get { return int.Parse(TopNumber.GetComponent<Text>().text); }
-        set { TopNumber.GetComponent<Text>().text = value.ToString(); }
+        get { return int.Parse(TopNumberPref.GetComponent<Text>().text); }
+        set { TopNumberPref.GetComponent<Text>().text = value.ToString(); }
     }
     public int BottNumerValue
     {
-        get { return int.Parse(BottNumber.GetComponent<Text>().text); }
-        set { BottNumber.GetComponent<Text>().text = value.ToString(); }
+        get { return int.Parse(BottNumberPref.GetComponent<Text>().text); }
+        set { BottNumberPref.GetComponent<Text>().text = value.ToString(); }
     }
     public int LeftNumerValue
     {
-        get { return int.Parse(LeftNumber.GetComponent<Text>().text); }
-        set { LeftNumber.GetComponent<Text>().text = value.ToString(); }
+        get { return int.Parse(LeftNumberPref.GetComponent<Text>().text); }
+        set { LeftNumberPref.GetComponent<Text>().text = value.ToString(); }
     }
     public int RightNumerValue
     {
-        get { return int.Parse(RightNumber.GetComponent<Text>().text); }
-        set { RightNumber.GetComponent<Text>().text = value.ToString(); }
+        get { return int.Parse(RightNumberPref.GetComponent<Text>().text); }
+        set { RightNumberPref.GetComponent<Text>().text = value.ToString(); }
     }
     //setter & getter for Name of the card
     public string CardName
     {
-        get { return Name.GetComponent<Text>().text; }
-        set { Name.GetComponent<Text>().text = value; }
+        get { return NamePref.GetComponent<Text>().text; }
+        set { NamePref.GetComponent<Text>().text = value; }
     }
 
     //setters for AvatarImage, background and Shield
     public Sprite AvatarImg
     {
-        set { AvatarImage.GetComponent<Image>().sprite = value; }
+        set { AvatarImagePref.GetComponent<Image>().sprite = value; }
     }
     public Sprite BackgroundImg
     {
-        set { Background.GetComponent<Image>().sprite = value; }
+        set { BackgroundPref.GetComponent<Image>().sprite = value; }
     }
     public Sprite ShieldImg
     {
-        set { Shield.GetComponent<Image>().sprite = value; }
+        set { ShieldPref.GetComponent<Image>().sprite = value; }
     }
     #endregion
 
@@ -70,16 +69,10 @@ public class Card : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
  
     public void OnPointerEnter(PointerEventData eventData)
     {
-        
-
-
-        //handReference.CardOnTop(this.gameObject);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-    
-        //handReference.BackToPreviousOrder();
     }
     #endregion
 
