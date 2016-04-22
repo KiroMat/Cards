@@ -18,11 +18,8 @@ public class Hand : MonoBehaviour {
 
             foreach (var item in cardsInHand)
             {
-                item.transform.parent = transform;
+                item.transform.SetParent(transform);
             }
         }
     }
-
-
-
 }
