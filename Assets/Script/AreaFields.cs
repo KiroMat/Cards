@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-
+using System.Collections.Generic;
 
 public class AreaFields : MonoBehaviour {
 
@@ -11,7 +11,7 @@ public class AreaFields : MonoBehaviour {
     public int WidthField;
     public int HeightField;
     public int SlotSpaceBetween;
-
+    public List<BoardField> ListOfFields;
 
     // Use this for initialization
     void Start () {
@@ -37,15 +37,22 @@ public class AreaFields : MonoBehaviour {
 
     private void fillEmptySlots()
     {
-        for (int i = 0; i < Columns * Rows; i++)
+        ListOfFields = new List<BoardField>();
+        for (int i = 0; i < Columns; i++)
         {
-            GameObject newSlot = Instantiate(EmptyField);
-            newSlot.transform.SetParent(transform);
-            RectTransform rect = newSlot.GetComponent<RectTransform>();
-            rect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, WidthField);
-            rect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, HeightField);
+            for (int j = 0; j < Rows; j++)
+            {
+                GameObject newSlot = Instantiate(EmptyField);
+                newSlot.transform.SetParent(transform);
+                RectTransform rect = newSlot.GetComponent<RectTransform>();
+                rect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, WidthField);
+                rect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, HeightField);
 
-            //allSlots.Add(newSlot.GetComponent<InventorySlot>());
+                var field = newSlot.GetComponent<BoardField>();
+                field.PositionInGrid = new Vector2(i, j);
+
+                ListOfFields.Add(field);
+            }
         }
     }
 }

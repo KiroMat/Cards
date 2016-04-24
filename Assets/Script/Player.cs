@@ -1,15 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Player : MonoBehaviour {
+    public int Score { get; set; }
+    public int Wins { get; set; }
+    public List<GameObject> Cards { get; set; }
 
- 
-	// Use this for initialization
-	void Start () {        
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    public Player()
+    {
+        //TODO: jest to do usunięcia ponieważ gracz nie bedzie później generował tali lecz ją składał
+        var generatorCards = GameObject.FindGameObjectWithTag("CardGenerator").GetComponent<GeneratorCards>();
+
+        Cards = generatorCards.GetListOfCards();
+    }
+
+
 }

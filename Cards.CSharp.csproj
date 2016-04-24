@@ -67,12 +67,15 @@
     <Compile Include="Assets\Presentation\Field.cs" />
     <Compile Include="Assets\Presentation\Slot.cs" />
     <Compile Include="Assets\Script\AreaFields.cs" />
+    <Compile Include="Assets\Script\BoardField.cs" />
     <Compile Include="Assets\Script\Camera.cs" />
-    <Compile Include="Assets\Script\Card.cs" />
+    <Compile Include="Assets\Script\Card\Card.cs" />
+    <Compile Include="Assets\Script\Card\MovingCard.cs" />
+    <Compile Include="Assets\Script\Card\SlotForCard.cs" />
     <Compile Include="Assets\Script\Hand.cs" />
+    <Compile Include="Assets\Script\ManagerGame.cs" />
     <Compile Include="Assets\Script\MechanismsForGame\GeneratorCards.cs" />
-    <Compile Include="Assets\Script\MechanismsForGame\MenuPanelActivation.cs" />
-    <Compile Include="Assets\Script\MechanismsForGame\PointerEnterExitHand.cs" />
+    <Compile Include="Assets\Script\MenuPanelActivation.cs" />
     <Compile Include="Assets\Script\ParticleSystemMultiplier.cs" />
     <Compile Include="Assets\Script\Player.cs" />
   </ItemGroup>

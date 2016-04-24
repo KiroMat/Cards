@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 using System;
 using UnityEngine.UI;
 
-public class Card : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
+public class Card : MonoBehaviour
 {
 
     #region CardElementsReferences
@@ -65,15 +65,5 @@ public class Card : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
     }
     #endregion
 
-    #region UnityMethods
- 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-    }
-
-    public void OnPointerExit(PointerEventData eventData)
-    {
-    }
-    #endregion
 
 }
