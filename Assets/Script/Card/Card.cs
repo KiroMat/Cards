@@ -8,7 +8,7 @@ public class Card : MonoBehaviour
 {
 
     #region CardElementsReferences
-    public GameObject ShieldPref;
+    public GameObject ShieldInPref;
     public GameObject BackgroundPref;
     public GameObject AvatarImagePref;
     public GameObject NamePref;
@@ -17,11 +17,18 @@ public class Card : MonoBehaviour
     public GameObject LeftNumberPref;
     public GameObject RightNumberPref;
     #endregion
-    #region ResourcesReferences
-    public Sprite redShield;
-    public Sprite blueShield;
-    #endregion
+
     #region Setters&Getters
+
+    public Color ColorShield
+    {
+        set
+        {
+            if (ShieldInPref != null)
+                ShieldInPref.GetComponent<Image>().color = value;
+        }
+    }
+
     //getters for numbers
     public int TopNumerValue
     {
@@ -58,10 +65,6 @@ public class Card : MonoBehaviour
     public Sprite BackgroundImg
     {
         set { BackgroundPref.GetComponent<Image>().sprite = value; }
-    }
-    public Sprite ShieldImg
-    {
-        set { ShieldPref.GetComponent<Image>().sprite = value; }
     }
     #endregion
 

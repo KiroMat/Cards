@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Hand : MonoBehaviour
 {
-
     public Transform emptySlot;
     private Transform lastCardOnTop;
     public List<GameObject> cardsInHand = new List<GameObject>();

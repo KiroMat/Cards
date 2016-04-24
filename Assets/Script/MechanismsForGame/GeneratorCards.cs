@@ -37,7 +37,6 @@ public class GeneratorCards : MonoBehaviour {
             if(card != null)
             {
                 card.BackgroundImg = Background;
-                card.ShieldImg = Shield;
                 if (listOfSprite == null)
                     return null;
                 card.AvatarImg = listOfSprite[Random.Range(0, listOfSprite.Count)];

@@ -62,6 +62,7 @@ public class ManagerGame : MonoBehaviour
             case StateGame.PrepareRound:
                 MockCreatePlayers();
                 FillHandPlayers();
+                SelectTheFirstPlayer();
                 break;
             case StateGame.StartGame:
                 break;
@@ -82,6 +83,11 @@ public class ManagerGame : MonoBehaviour
         }
     }
 
+    private void SelectTheFirstPlayer()
+    {
+        
+    }
+
     private void FillHandPlayers()
     {
         // Do zastanowienia się czy graczy bedzie tylko 2 czy bedziemy brać pod uwagę wiecej niż dwóch
@@ -99,5 +105,8 @@ public class ManagerGame : MonoBehaviour
         {
             players.Add(new Player());
         }
+
+        players[0].Color = Color.green;
+        players[1].Color = Color.red;
     }
 }
