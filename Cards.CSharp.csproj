@@ -67,15 +67,17 @@
     <Compile Include="Assets\Presentation\Field.cs" />
     <Compile Include="Assets\Presentation\Slot.cs" />
     <Compile Include="Assets\Script\AreaFields.cs" />
+    <Compile Include="Assets\Script\BoardField.cs" />
     <Compile Include="Assets\Script\Camera.cs" />
-    <Compile Include="Assets\Script\Card.cs" />
+    <Compile Include="Assets\Script\Card\Card.cs" />
+    <Compile Include="Assets\Script\Card\MoveingCard.cs" />
+    <Compile Include="Assets\Script\Card\SlotForCard.cs" />
     <Compile Include="Assets\Script\Hand.cs" />
+    <Compile Include="Assets\Script\ManagerGame.cs" />
     <Compile Include="Assets\Script\MechanismsForGame\GeneratorCards.cs" />
     <Compile Include="Assets\Script\MenuPanelActivation.cs" />
-    <Compile Include="Assets\Script\MoveingCard.cs" />
     <Compile Include="Assets\Script\ParticleSystemMultiplier.cs" />
     <Compile Include="Assets\Script\Player.cs" />
-    <Compile Include="Assets\Script\SlotForCard.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
