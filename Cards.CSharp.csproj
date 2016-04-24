@@ -70,7 +70,7 @@
     <Compile Include="Assets\Script\BoardField.cs" />
     <Compile Include="Assets\Script\Camera.cs" />
     <Compile Include="Assets\Script\Card\Card.cs" />
-    <Compile Include="Assets\Script\Card\MoveingCard.cs" />
+    <Compile Include="Assets\Script\Card\MovingCard.cs" />
     <Compile Include="Assets\Script\Card\SlotForCard.cs" />
     <Compile Include="Assets\Script\Hand.cs" />
     <Compile Include="Assets\Script\ManagerGame.cs" />

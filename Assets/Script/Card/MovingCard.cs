@@ -4,13 +4,20 @@ using UnityEngine.EventSystems;
 using System;
 using UnityEngine.UI;
 
-public class MoveingCard : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class MovingCard : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    public bool CanMoving = false;
+
     Transform emptySlotInHeand = null;
     int sibliIndex = 0;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        if (transform.parent.GetComponent<BoardField>() != null)
+            CanMoving = false;
+        else
+            CanMoving = true;
+
         var empty = transform.parent.GetComponent<Hand>();
         if(empty != null)
         {
@@ -41,17 +48,22 @@ public class MoveingCard : MonoBehaviour, IPointerExitHandler, IPointerEnterHand
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        transform.position = eventData.position;
-        GetComponent<CanvasGroup>().blocksRaycasts = false;
+        if (CanMoving)
+        {
+            transform.position = eventData.position;
+            GetComponent<CanvasGroup>().blocksRaycasts = false;
+        }   
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        transform.position = eventData.position;
+        if(CanMoving)
+            transform.position = eventData.position;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        GetComponent<CanvasGroup>().blocksRaycasts = true;
+        if(CanMoving)
+            GetComponent<CanvasGroup>().blocksRaycasts = true;
     }
 }

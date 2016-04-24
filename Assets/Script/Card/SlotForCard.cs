@@ -8,9 +8,10 @@ public class SlotForCard : MonoBehaviour, IDropHandler
     public void OnDrop(PointerEventData eventData)
     {
         var dropCard = eventData.pointerDrag;
-
-        dropCard.transform.SetParent(transform);
-        dropCard.GetComponent<RectTransform>().position = transform.position;
-
+        if(dropCard.GetComponent<MovingCard>().CanMoving)
+        {
+            dropCard.transform.SetParent(transform);
+            dropCard.GetComponent<RectTransform>().position = transform.position;
+        }
     }
 }

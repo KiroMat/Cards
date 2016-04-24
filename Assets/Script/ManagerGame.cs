@@ -66,6 +66,7 @@ public class ManagerGame : MonoBehaviour
                 break;
             case StateGame.StartGame:
                 break;
+            // ******** Ta część bedzie wydzielona do innej funkcji
             case StateGame.BeginRound:
                 break;
             case StateGame.PlayPlayer:
@@ -74,6 +75,7 @@ public class ManagerGame : MonoBehaviour
                 break;
             case StateGame.EndRound:
                 break;
+            //*********************
             case StateGame.EndGame:
                 break;
             default:
