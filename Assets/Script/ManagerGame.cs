@@ -21,6 +21,8 @@ public class ManagerGame : MonoBehaviour
     public AreaFields Area;
     public GameObject HandPlayerOne;
     public GameObject HandPlayerTwo;
+    public GameObject WindowsMessage;
+
     public GeneratorCards GenerateCards { get; set; }
 
 
@@ -46,7 +48,15 @@ public class ManagerGame : MonoBehaviour
     // zmienne pomocnicze
     int numberOfPlayers = 2;
 
-    // Use this for initialization
+
+    public void ShowMessage(string text)
+    {
+        if (WindowsMessage != null)
+            WindowsMessage.GetComponent<WindowMessage>().ShowMessage(text, 80);
+        else
+            Debug.Log("Okno dla wiadomości nie zostało podpięte go GameManager");
+    }
+
     void Start()
     {
         CurrentState = StateGame.PrepareRound;
@@ -63,8 +73,11 @@ public class ManagerGame : MonoBehaviour
                 MockCreatePlayers();
                 FillHandPlayers();
                 SelectTheFirstPlayer();
+
+                CurrentState = StateGame.StartGame;
                 break;
             case StateGame.StartGame:
+                ShowMessage("Start game");
                 break;
             // ******** Ta część bedzie wydzielona do innej funkcji
             case StateGame.BeginRound:
