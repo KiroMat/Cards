@@ -19,6 +19,7 @@ public class Hand : MonoBehaviour
                 item.transform.SetParent(transform);
                 cardsInHand.Add(item);
             }
-        }
+        }
+
     }
 }
