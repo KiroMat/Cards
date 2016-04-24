@@ -3,8 +3,9 @@ using System.Collections;
 
 public class Camera : MonoBehaviour {
 
-    public float _MoveSpeed = 20;
-    public float _ScrollSpeed = 5;
+    private float _MoveSpeed = 0.1f;
+    private float _ScrollSpeed = 80f;
+    public float _ZoomSpeedFactor = 10f;
     public float _InitialZoom = -300;
     private int _Border = 1;
     public bool _BorderScrollingEnabled;
@@ -24,19 +25,31 @@ public class Camera : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        BorderScrolling();
-        ZoomScrolling();
-        CameraScrollingKeyboard();
-        CameraDrag();
+        if (_BorderScrollingEnabled)
+        {
+            BorderScrolling();
+        }
+        if (_ZoomScrollingEnabled)
+        {
+            ZoomScrolling();
+        }
+        if (_KeyboardCameraScrolling)
+        {
+            CameraScrollingKeyboard();
+        }
+        if (_CameraDragEnabled)
+        {
+            CameraDrag();
+        }
     }
 
     private void ZoomScrolling()
     {
-        if (_ZoomScrollingEnabled)
-        {
+        
             if (this.transform.position.z < _zoomInLimit && this.transform.position.z > _zoomOutLimit)
             {
                 transform.Translate(Vector3.forward * _ScrollSpeed * Input.GetAxis("Mouse ScrollWheel"), Space.World);
+
             }
             else if (this.transform.position.z >= _zoomInLimit && Input.GetAxis("Mouse ScrollWheel") < 0)
             {
@@ -46,12 +59,10 @@ public class Camera : MonoBehaviour {
             {
                 transform.Translate(Vector3.forward * _ScrollSpeed * Input.GetAxis("Mouse ScrollWheel"), Space.World);
             }
-        }
     }
     private void CameraScrollingKeyboard()
     {
-        if (_KeyboardCameraScrolling)
-        {
+        
             var AxisX = Input.GetAxis("Horizontal");
             var AxisY = Input.GetAxis("Vertical");
             if (AxisX != 0)
@@ -62,13 +73,9 @@ public class Camera : MonoBehaviour {
             {
                 transform.Translate(Vector3.up * AxisY * 1000 * Time.deltaTime, Space.World);
             }
-
-        }
     }
     private void BorderScrolling()
     {
-        if (_BorderScrollingEnabled)
-        {
             var _MouseX = Input.mousePosition.x;
             var _MouseY = Input.mousePosition.y;
             if (_MouseX < _Border)
@@ -87,13 +94,9 @@ public class Camera : MonoBehaviour {
             {
                 transform.Translate(Vector3.up * _MoveSpeed * Time.deltaTime, Space.World);
             }
-        }
     }
     private void CameraDrag()
     {
-        if (_CameraDragEnabled)
-        {
-           
             if (Input.GetMouseButtonDown(1))
             {
                 dragOrigin = Input.mousePosition;
@@ -104,9 +107,8 @@ public class Camera : MonoBehaviour {
 
             Vector3 pos = Input.mousePosition-dragOrigin;
             Debug.Log("DragOrigin: "+dragOrigin+" mousePosition: "+Input.mousePosition+"DeltaVector: "+(pos));
-            Vector3 move = new Vector3(pos.x * _MoveSpeed/100, pos.y * _MoveSpeed/100, this.transform.position.z);
-            transform.Translate(pos, Space.World);
-        }
+            Vector3 move = new Vector3(pos.x*_MoveSpeed, pos.y*_MoveSpeed, 0);
+            transform.Translate(move, Space.Self);
     }
 }
 
