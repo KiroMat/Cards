@@ -38,7 +38,7 @@ public class AreaFields : MonoBehaviour {
     private void fillEmptySlots()
     {
         ListOfFields = new List<BoardField>();
-        for (int i = 0; i < Columns * Rows; i++)
+        for (int i = 0; i < Columns; i++)
         {
             for (int j = 0; j < Rows; j++)
             {

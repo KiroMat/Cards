@@ -3,23 +3,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
-public class Hand : MonoBehaviour {
+public class Hand : MonoBehaviour
+{
 
     public Transform emptySlot;
     private Transform lastCardOnTop;
     public List<GameObject> cardsInHand = new List<GameObject>();
 
-    void Start()
+    public void SetCartsInHand(List<GameObject> cards)
     {
-        var gen = GameObject.FindGameObjectWithTag("CardGenerator").GetComponent<GeneratorCards>();
-        if(gen != null)
+        cardsInHand = new List<GameObject>();
+        if (cards != null)
         {
-            cardsInHand = gen.GetListOfCards();
-
-            foreach (var item in cardsInHand)
+            foreach (var item in cards)
             {
                 item.transform.SetParent(transform);
+                cardsInHand.Add(item);
             }
-        }
+        }
     }
 }
