@@ -39,8 +39,7 @@ public class ManagerGame : MonoBehaviour
                 currentState = value;
                 ChangeState();
                 oldState = currentState;
-            }
-                
+            }      
         }
     }
 

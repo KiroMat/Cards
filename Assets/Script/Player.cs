@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Player : MonoBehaviour {
+public class Player {
     public int Score { get; set; }
     public int Wins { get; set; }
     public List<GameObject> Cards { get; set; }
