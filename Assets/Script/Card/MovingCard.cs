@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MovingCard : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public bool CanMoving = false;
+    public bool isActive = false;
 
     Transform emptySlotInHeand = null;
     int sibliIndex = 0;
@@ -48,7 +49,7 @@ public class MovingCard : MonoBehaviour, IPointerExitHandler, IPointerEnterHandl
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (CanMoving)
+        if (CanMoving && isActive)
         {
             transform.position = eventData.position;
             GetComponent<CanvasGroup>().blocksRaycasts = false;
@@ -57,13 +58,13 @@ public class MovingCard : MonoBehaviour, IPointerExitHandler, IPointerEnterHandl
 
     public void OnDrag(PointerEventData eventData)
     {
-        if(CanMoving)
+        if(CanMoving && isActive)
             transform.position = eventData.position;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if(CanMoving)
+        if(CanMoving && isActive)
             GetComponent<CanvasGroup>().blocksRaycasts = true;
     }
 }

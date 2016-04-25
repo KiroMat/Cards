@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class Card : MonoBehaviour
 {
-
-    #region CardElementsReferences
     public GameObject ShieldInPref;
     public GameObject BackgroundPref;
     public GameObject AvatarImagePref;
@@ -16,9 +14,6 @@ public class Card : MonoBehaviour
     public GameObject BottNumberPref;
     public GameObject LeftNumberPref;
     public GameObject RightNumberPref;
-    #endregion
-
-    #region Setters&Getters
 
     public Color ColorShield
     {
@@ -29,7 +24,6 @@ public class Card : MonoBehaviour
         }
     }
 
-    //getters for numbers
     public int TopNumerValue
     {
         get { return int.Parse(TopNumberPref.GetComponent<Text>().text); }
@@ -50,14 +44,11 @@ public class Card : MonoBehaviour
         get { return int.Parse(RightNumberPref.GetComponent<Text>().text); }
         set { RightNumberPref.GetComponent<Text>().text = value.ToString(); }
     }
-    //setter & getter for Name of the card
     public string CardName
     {
         get { return NamePref.GetComponent<Text>().text; }
         set { NamePref.GetComponent<Text>().text = value; }
     }
-
-    //setters for AvatarImage, background and Shield
     public Sprite AvatarImg
     {
         set { AvatarImagePref.GetComponent<Image>().sprite = value; }
@@ -66,7 +57,6 @@ public class Card : MonoBehaviour
     {
         set { BackgroundPref.GetComponent<Image>().sprite = value; }
     }
-    #endregion
 
-
+    public Player Owner;
 }
