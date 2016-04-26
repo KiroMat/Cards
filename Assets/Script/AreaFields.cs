@@ -11,7 +11,7 @@ public class AreaFields : MonoBehaviour {
     public int WidthField;
     public int HeightField;
     public int SlotSpaceBetween;
-    public List<BoardField> ListOfFields;
+    public List<GameObject> ListOfFields;
 
     // Use this for initialization
     void Start () {
@@ -29,15 +29,32 @@ public class AreaFields : MonoBehaviour {
 
         fillEmptySlots();
     }
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
+    public bool IsFullArea()
+    {
+        int numberFoundCard = 0;
+        foreach (var field in ListOfFields)
+        {
+            foreach (Transform item in field.transform)
+            {
+                if (item.GetComponent<Card>() != null)
+                {
+                    numberFoundCard++;
+                    continue;
+                }
+            }
+        }
+
+        if (numberFoundCard == ListOfFields.Count)
+            return true;
+        else
+            return false;
+    }
+
 
     private void fillEmptySlots()
     {
-        ListOfFields = new List<BoardField>();
+        ListOfFields = new List<GameObject>();
         for (int i = 0; i < Columns; i++)
         {
             for (int j = 0; j < Rows; j++)
@@ -48,10 +65,9 @@ public class AreaFields : MonoBehaviour {
                 rect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, WidthField);
                 rect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, HeightField);
 
-                var field = newSlot.GetComponent<BoardField>();
-                field.PositionInGrid = new Vector2(i, j);
+                newSlot.GetComponent<BoardField>().PositionInGrid = new Vector2(i, j);
 
-                ListOfFields.Add(field);
+                ListOfFields.Add(newSlot);
             }
         }
     }

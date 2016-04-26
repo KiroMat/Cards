@@ -61,7 +61,7 @@ public class GeneratorCards : MonoBehaviour {
         Syllable = syllable.Split(' ').ToList();
     }
 
-    private string GenerateName()
+    public string GenerateName()
     {
         StringBuilder name = new StringBuilder("");
 

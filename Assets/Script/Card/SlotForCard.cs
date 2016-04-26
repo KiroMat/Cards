@@ -15,10 +15,12 @@ public class SlotForCard : MonoBehaviour, IDropHandler
                 return;
         }
         
-        if(dropCard.GetComponent<MovingCard>().CanMoving)
+        if(dropCard.GetComponent<MovingCard>().CanMoving && dropCard.GetComponent<MovingCard>().isActive)
         {
             dropCard.transform.SetParent(transform);
             dropCard.GetComponent<RectTransform>().position = transform.position;
+
+            GameObject.Find("ManagerGame").GetComponent<ManagerGame>().EndMovePlayer();
         }
     }
 }
