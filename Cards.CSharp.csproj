@@ -73,7 +73,7 @@
     <Compile Include="Assets\Script\Card\MovingCard.cs" />
     <Compile Include="Assets\Script\Card\ShieldCard.cs" />
     <Compile Include="Assets\Script\Card\SlotForCard.cs" />
-    <Compile Include="Assets\Script\GUI\WindowMessage.cs" />
+    <Compile Include="Assets\Script\GUI\WindowMessageManager.cs" />
     <Compile Include="Assets\Script\Hand.cs" />
     <Compile Include="Assets\Script\ManagerGame.cs" />
     <Compile Include="Assets\Script\MechanismsForGame\GeneratorCards.cs" />

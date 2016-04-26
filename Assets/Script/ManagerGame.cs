@@ -23,6 +23,7 @@ public class ManagerGame : MonoBehaviour
     public GameObject HandPlayerOne;
     public GameObject HandPlayerTwo;
     public GameObject WindowsMessage;
+    public WindowMessageManager windowMessageManager;
 
     public GeneratorCards GenerateCards { get; set; }
 
@@ -59,15 +60,6 @@ public class ManagerGame : MonoBehaviour
             CurrentState = StateGame.EndRound;
     }
 
-
-    public void ShowMessage(string text)
-    {
-        if (WindowsMessage != null)
-            WindowsMessage.GetComponent<WindowMessage>().ShowMessage(text, 80);
-        else
-            Debug.Log("Okno dla wiadomości nie zostało podpięte go GameManager");
-    }
-
     void Start()
     {
         CurrentState = StateGame.PrepareRound;
@@ -87,7 +79,7 @@ public class ManagerGame : MonoBehaviour
                 CurrentState = StateGame.StartGame;
                 break;
             case StateGame.StartGame:
-                ShowMessage("Start game");
+                windowMessageManager.ShowMessage("Start game", 50);
 
                 CurrentState = StateGame.BeginRound;
                 break;
@@ -115,8 +107,7 @@ public class ManagerGame : MonoBehaviour
                 break;
             //*********************
             case StateGame.EndGame:
-                ShowMessage("Koniec gry");
-                SceneManager.LoadScene("Menu");
+                windowMessageManager.ShowMessage("Koniec gry", 50, GoToManu);
                 break;
             default:
                 break;
@@ -153,5 +144,10 @@ public class ManagerGame : MonoBehaviour
 
         players[0].Color = Color.green;
         players[1].Color = Color.red;
+    }
+
+    private void GoToManu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }
