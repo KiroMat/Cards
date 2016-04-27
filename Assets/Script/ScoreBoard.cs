@@ -4,13 +4,18 @@ using UnityEngine.UI;
 using UnityEngine.Internal;
 
 public class ScoreBoard : MonoBehaviour {
-    public GameObject activePlayerParticle;
     public GameObject shieldLeft;
     public GameObject shieldRight;
     public GameObject sliderLeft;
     public GameObject sliderRight;
     public GameObject sliderGameObject;
+    public Text textLeft;
+    public Text textRight;
     Vector3 tempVector;
+
+    public int pL;
+    public int pR;
+
     public float sliderValue
     {
         get { return sliderGameObject.GetComponent<Slider>().value; }
@@ -33,16 +38,40 @@ public class ScoreBoard : MonoBehaviour {
         }
     }
 
+    public void setScore(int playerLeft,int playerRight)
+    {
+        float tempFloat=0;
+        if (playerLeft == 0 && playerRight != 0)
+        {
+             tempFloat = 1f;
+        }
+        else if (playerRight == 0 && playerLeft != 0)
+        {
+            tempFloat = 0;
+        }
+        else if (playerLeft == playerRight)
+        {
+            tempFloat = 0.5f;
+        }
+        else if (playerLeft > playerRight)
+        {
+            tempFloat = 1f -  ((float)playerRight / (float)(playerLeft+playerRight));
+        }
+        else if (playerLeft < playerRight)
+        {
+            tempFloat = (float)playerLeft / (float)(playerLeft + playerRight);
+        }
+        textLeft.text = playerLeft.ToString();
+        textRight.text = playerRight.ToString();
+        sliderValue = tempFloat;
+    }
+
     void Start () {
-        rightColor = Color.green;
-        leftColor = Color.cyan;
-        sliderValue = 0.8f;
+        
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-        tempVector = UnityEngine.Camera.main.ScreenToWorldPoint(shieldLeft.transform.localPosition);
-        activePlayerParticle.transform.position = new Vector3(tempVector.x, tempVector.y, 0);
+        setScore(pL, pR);
 	}
 }

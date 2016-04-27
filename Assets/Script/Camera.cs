@@ -106,7 +106,7 @@ public class Camera : MonoBehaviour {
             if (!Input.GetMouseButton(1)) return;
 
             Vector3 pos = Input.mousePosition-dragOrigin;
-            Debug.Log("DragOrigin: "+dragOrigin+" mousePosition: "+Input.mousePosition+"DeltaVector: "+(pos));
+          //  Debug.Log("DragOrigin: "+dragOrigin+" mousePosition: "+Input.mousePosition+"DeltaVector: "+(pos));
             Vector3 move = new Vector3(pos.x*_MoveSpeed, pos.y*_MoveSpeed, 0);
             transform.Translate(move, Space.Self);
     }
