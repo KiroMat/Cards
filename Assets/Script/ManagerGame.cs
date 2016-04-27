@@ -51,6 +51,9 @@ public class ManagerGame : MonoBehaviour
 
     public void EndMovePlayer()
     {
+        Area.UpdateScoreForPlayers();
+        scoreBoard.updateScoreBoard();
+
         if (Area.IsFullArea())
             CurrentState = StateGame.EndGame;
 
@@ -76,6 +79,7 @@ public class ManagerGame : MonoBehaviour
                 FillHandPlayers();
                 scoreBoard.initializeScoreBoard(ref players);
                 SelectTheFirstPlayer();
+                Area.InitializePlayers(ref players);
 
                 CurrentState = StateGame.StartGame;
                 break;
@@ -97,13 +101,11 @@ public class ManagerGame : MonoBehaviour
                 players[0].IsActive = true;
                 players[1].IsActive = false;
                 players[0].Score++;//linia dodana tylko aby sprawdzic dzialanie ScoreBoard - usun ja 
-                scoreBoard.updateScoreBoard();
                 break;
             case StateGame.PlayChallenger:
                 players[0].IsActive = false;
                 players[1].IsActive = true;
                 players[1].Score++;//linia dodana tylko aby sprawdzic dzialanie ScoreBoard - usun ja 
-                scoreBoard.updateScoreBoard();
                 break;
             case StateGame.EndRound:
                 //TODO: Jakieś obliczenia, zliczanie czegoś 
