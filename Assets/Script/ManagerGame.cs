@@ -22,8 +22,7 @@ public class ManagerGame : MonoBehaviour
     public AreaFields Area;
     public GameObject HandPlayerOne;
     public GameObject HandPlayerTwo;
-    public GameObject WindowsMessage;
-    public WindowMessageManager windowMessageManager;
+    public WindowMessage windowMessage;
 
     public GeneratorCards GenerateCards { get; set; }
 
@@ -79,7 +78,7 @@ public class ManagerGame : MonoBehaviour
                 CurrentState = StateGame.StartGame;
                 break;
             case StateGame.StartGame:
-                windowMessageManager.ShowMessage("Start game", 50);
+                windowMessage.ShowMessage("Start game", 50);
 
                 CurrentState = StateGame.BeginRound;
                 break;
@@ -107,7 +106,7 @@ public class ManagerGame : MonoBehaviour
                 break;
             //*********************
             case StateGame.EndGame:
-                windowMessageManager.ShowMessage("Koniec gry", 50, GoToManu);
+                windowMessage.ShowMessage("Koniec gry", 50, GoToManu);
                 break;
             default:
                 break;
