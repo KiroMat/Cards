@@ -22,6 +22,7 @@ public class ManagerGame : MonoBehaviour
     public AreaFields Area;
     public GameObject HandPlayerOne;
     public GameObject HandPlayerTwo;
+    public ScoreBoard scoreBoard;
     public WindowMessage windowMessage;
 
     public GeneratorCards GenerateCards { get; set; }
@@ -73,6 +74,7 @@ public class ManagerGame : MonoBehaviour
             case StateGame.PrepareRound:
                 MockCreatePlayers();
                 FillHandPlayers();
+                scoreBoard.initializeScoreBoard(ref players);
                 SelectTheFirstPlayer();
 
                 CurrentState = StateGame.StartGame;
@@ -94,10 +96,14 @@ public class ManagerGame : MonoBehaviour
             case StateGame.PlayPlayer:
                 players[0].IsActive = true;
                 players[1].IsActive = false;
+                players[0].Score++;//linia dodana tylko aby sprawdzic dzialanie ScoreBoard - usun ja 
+                scoreBoard.updateScoreBoard();
                 break;
             case StateGame.PlayChallenger:
                 players[0].IsActive = false;
                 players[1].IsActive = true;
+                players[1].Score++;//linia dodana tylko aby sprawdzic dzialanie ScoreBoard - usun ja 
+                scoreBoard.updateScoreBoard();
                 break;
             case StateGame.EndRound:
                 //TODO: Jakieś obliczenia, zliczanie czegoś 

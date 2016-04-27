@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.Internal;
 
@@ -11,10 +12,7 @@ public class ScoreBoard : MonoBehaviour {
     public GameObject sliderGameObject;
     public Text textLeft;
     public Text textRight;
-    Vector3 tempVector;
-
-    public int pL;
-    public int pR;
+    private List<Player> playersRef;
 
     public float sliderValue
     {
@@ -66,12 +64,17 @@ public class ScoreBoard : MonoBehaviour {
         sliderValue = tempFloat;
     }
 
-    void Start () {
+    public void initializeScoreBoard(ref List<Player> playersRfList)
+    {
+        playersRef = playersRfList;
+        //only 2 players, later this method will be changed
+        rightColor = playersRef[0].Color;
+        leftColor = playersRef[1].Color;
         
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        setScore(pL, pR);
-	}
+    }
+    public void updateScoreBoard()
+    {
+        //only 2 players, later this method will be changed
+        setScore(playersRef[1].Score, playersRef[0].Score);
+    }
 }
