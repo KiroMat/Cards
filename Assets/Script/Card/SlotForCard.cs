@@ -20,6 +20,10 @@ public class SlotForCard : MonoBehaviour, IDropHandler
             dropCard.transform.SetParent(transform);
             dropCard.GetComponent<RectTransform>().position = transform.position;
 
+            var field = gameObject.GetComponent<BoardField>();
+            if (field != null)
+                    GameObject.Find("ManagerGame").GetComponent<ManagerGame>().Area.PutNewCard(field.PositionInGrid);
+
             GameObject.Find("ManagerGame").GetComponent<ManagerGame>().EndMovePlayer();
         }
     }

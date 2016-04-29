@@ -17,6 +17,7 @@ public class Card : MonoBehaviour
 
     public Color ColorShield
     {
+        get { return ShieldInPref.GetComponent<Image>().color; }
         set
         {
             if (ShieldInPref != null)
