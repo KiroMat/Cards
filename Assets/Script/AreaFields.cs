@@ -3,7 +3,8 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
-public class AreaFields : MonoBehaviour {
+public class AreaFields : MonoBehaviour
+{
 
     public GameObject EmptyField;
     public int Columns;
@@ -16,7 +17,8 @@ public class AreaFields : MonoBehaviour {
     public List<Player> ListPlayer;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         RectTransform rectControl = gameObject.GetComponent<RectTransform>();
 
         int widthPanel = Columns * WidthField; // (WidthField + SlotSpaceBetween) + SlotSpaceBetween;     
@@ -56,9 +58,9 @@ public class AreaFields : MonoBehaviour {
     private void fillEmptySlots()
     {
         ListOfFields = new List<GameObject>();
-        for (int i = 0; i < Columns; i++)
+        for (int i = 0; i < Rows; i++)
         {
-            for (int j = 0; j < Rows; j++)
+            for (int j = 0; j < Columns; j++)
             {
                 GameObject newSlot = Instantiate(EmptyField);
                 newSlot.transform.SetParent(transform);
@@ -66,7 +68,7 @@ public class AreaFields : MonoBehaviour {
                 rect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, WidthField);
                 rect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, HeightField);
 
-                newSlot.GetComponent<BoardField>().PositionInGrid = new Vector2(i, j);
+                newSlot.GetComponent<BoardField>().PositionInGrid = new Vector2(j, i);
 
                 ListOfFields.Add(newSlot);
             }
@@ -94,9 +96,9 @@ public class AreaFields : MonoBehaviour {
                 var card = item.GetComponent<Card>();
                 if (card != null)
                 {
-                    if (card.Owner.Color == ListPlayer[0].Color)
+                    if (card.ColorShield == ListPlayer[0].Color)
                         ListPlayer[0].Score++;
-                    else 
+                    else
                         ListPlayer[1].Score++;
                 }
             }
@@ -107,4 +109,76 @@ public class AreaFields : MonoBehaviour {
         ListPlayer[0].Score += managar.HandPlayerOne.GetComponent<Hand>().GetCountCards();
         ListPlayer[1].Score += managar.HandPlayerTwo.GetComponent<Hand>().GetCountCards();
     }
+
+    public void PutNewCard(Vector2 position)
+    {
+        if (GetCardbyPosition(position) != null)
+        {
+            
+            Card currentCard = GetCardbyPosition(position);
+            if (GetCardbyPosition(position + new Vector2(0, 1)) != null)
+            {
+                // sprawdza pozycja niżej
+                Card card = GetCardbyPosition(position + new Vector2(0, 1));
+                if (card.ColorShield == currentCard.ColorShield) return;
+
+                if (currentCard.BottNumerValue > card.TopNumerValue)
+                    card.ColorShield = currentCard.Owner.Color;
+                else if (currentCard.BottNumerValue < card.TopNumerValue)
+                    currentCard.ColorShield = card.Owner.Color;
+            }
+            if (GetCardbyPosition(position + new Vector2(1, 0)) != null)
+            {
+                // pozycja po prawej
+                Card card = GetCardbyPosition(position + new Vector2(1, 0));
+                if (card.ColorShield == currentCard.ColorShield) return;
+
+                if (currentCard.RightNumerValue > card.LeftNumerValue)
+                    card.ColorShield = currentCard.Owner.Color;
+                else if (currentCard.RightNumerValue < card.LeftNumerValue)
+                    currentCard.ColorShield = card.Owner.Color;
+            }
+            if (GetCardbyPosition(position + new Vector2(0, -1)) != null)
+            {
+                // pozycja wyżej
+                Card card = GetCardbyPosition(position + new Vector2(0, -1));
+                if (card.ColorShield == currentCard.ColorShield) return;
+
+                if (currentCard.TopNumerValue > card.BottNumerValue)
+                    card.ColorShield = currentCard.Owner.Color;
+                else if (currentCard.TopNumerValue < card.BottNumerValue)
+                    currentCard.ColorShield = card.Owner.Color;
+            }
+            if (GetCardbyPosition(position + new Vector2(-1, 0)) != null)
+            {
+                // pozycja z lewej
+                Card card = GetCardbyPosition(position + new Vector2(-1, 0));
+                if (card.ColorShield == currentCard.ColorShield) return;
+
+                if (currentCard.LeftNumerValue > card.RightNumerValue)
+                    card.ColorShield = currentCard.Owner.Color;
+                else if (currentCard.LeftNumerValue < card.RightNumerValue)
+                    currentCard.ColorShield = card.Owner.Color;
+            }
+        }
+    }
+
+    public Card GetCardbyPosition(Vector2 position)
+    {
+        foreach (var field in ListOfFields)
+        {
+            if(field.GetComponent<BoardField>().PositionInGrid == position)
+            {
+                foreach (Transform item in field.transform)
+                {
+                    if (item.GetComponent<Card>() != null)
+                    {
+                        return item.GetComponent<Card>();
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
 }
