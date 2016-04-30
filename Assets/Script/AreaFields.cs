@@ -114,51 +114,58 @@ public class AreaFields : MonoBehaviour
     {
         if (GetCardbyPosition(position) != null)
         {
-            
+
             Card currentCard = GetCardbyPosition(position);
             if (GetCardbyPosition(position + new Vector2(0, 1)) != null)
             {
                 // sprawdza pozycja niżej
                 Card card = GetCardbyPosition(position + new Vector2(0, 1));
-                if (card.ColorShield == currentCard.ColorShield) return;
+                if (card.ColorShield != currentCard.ColorShield)
+                {
+                    if (currentCard.BottNumerValue > card.TopNumerValue)
+                        card.ColorShield = currentCard.Owner.Color;
+                }
 
-                if (currentCard.BottNumerValue > card.TopNumerValue)
-                    card.ColorShield = currentCard.Owner.Color;
-                else if (currentCard.BottNumerValue < card.TopNumerValue)
-                    currentCard.ColorShield = card.Owner.Color;
+                //else if (currentCard.BottNumerValue < card.TopNumerValue)
+                //    currentCard.ColorShield = card.Owner.Color;
             }
             if (GetCardbyPosition(position + new Vector2(1, 0)) != null)
             {
                 // pozycja po prawej
                 Card card = GetCardbyPosition(position + new Vector2(1, 0));
-                if (card.ColorShield == currentCard.ColorShield) return;
+                if (card.ColorShield != currentCard.ColorShield)
+                {
+                    if (currentCard.RightNumerValue > card.LeftNumerValue)
+                        card.ColorShield = currentCard.Owner.Color;
+                }
 
-                if (currentCard.RightNumerValue > card.LeftNumerValue)
-                    card.ColorShield = currentCard.Owner.Color;
-                else if (currentCard.RightNumerValue < card.LeftNumerValue)
-                    currentCard.ColorShield = card.Owner.Color;
+                //else if (currentCard.RightNumerValue < card.LeftNumerValue)
+                //    currentCard.ColorShield = card.Owner.Color;
             }
             if (GetCardbyPosition(position + new Vector2(0, -1)) != null)
             {
                 // pozycja wyżej
                 Card card = GetCardbyPosition(position + new Vector2(0, -1));
-                if (card.ColorShield == currentCard.ColorShield) return;
+                if (card.ColorShield != currentCard.ColorShield)
+                {
+                    if (currentCard.TopNumerValue > card.BottNumerValue)
+                        card.ColorShield = currentCard.Owner.Color;
+                }
 
-                if (currentCard.TopNumerValue > card.BottNumerValue)
-                    card.ColorShield = currentCard.Owner.Color;
-                else if (currentCard.TopNumerValue < card.BottNumerValue)
-                    currentCard.ColorShield = card.Owner.Color;
+                //else if (currentCard.TopNumerValue < card.BottNumerValue)
+                //    currentCard.ColorShield = card.Owner.Color;
             }
             if (GetCardbyPosition(position + new Vector2(-1, 0)) != null)
             {
                 // pozycja z lewej
                 Card card = GetCardbyPosition(position + new Vector2(-1, 0));
-                if (card.ColorShield == currentCard.ColorShield) return;
-
-                if (currentCard.LeftNumerValue > card.RightNumerValue)
-                    card.ColorShield = currentCard.Owner.Color;
-                else if (currentCard.LeftNumerValue < card.RightNumerValue)
-                    currentCard.ColorShield = card.Owner.Color;
+                if (card.ColorShield != currentCard.ColorShield)
+                {
+                    if (currentCard.LeftNumerValue > card.RightNumerValue)
+                        card.ColorShield = currentCard.Owner.Color;
+                }
+                //else if (currentCard.LeftNumerValue < card.RightNumerValue)
+                //    currentCard.ColorShield = card.Owner.Color;
             }
         }
     }
@@ -167,7 +174,7 @@ public class AreaFields : MonoBehaviour
     {
         foreach (var field in ListOfFields)
         {
-            if(field.GetComponent<BoardField>().PositionInGrid == position)
+            if (field.GetComponent<BoardField>().PositionInGrid == position)
             {
                 foreach (Transform item in field.transform)
                 {
