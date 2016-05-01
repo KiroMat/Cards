@@ -1,0 +1,320 @@
+fileFormatVersion: 2
+guid: e737affa4f3b2ae488163890ade0c969
+timeCreated: 1462036582
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Tarczaspritesheet3_0
+    21300002: Tarczaspritesheet3_1
+    21300004: Tarczaspritesheet3_2
+    21300006: Tarczaspritesheet3_3
+    21300008: Tarczaspritesheet3_4
+    21300010: Tarczaspritesheet3_5
+    21300012: Tarczaspritesheet3_6
+    21300014: Tarczaspritesheet3_7
+    21300016: Tarczaspritesheet3_8
+    21300018: Tarczaspritesheet3_9
+    21300020: Tarczaspritesheet3_10
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Tarczaspritesheet3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2968
+        width: 1550
+        height: 1484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -64, y: 61.599365}
+        - {x: -64, y: -48.400635}
+        - {x: -58, y: -61.400635}
+        - {x: 48, y: -61.400635}
+        - {x: 64, y: -25.400635}
+        - {x: 64, y: 61.599365}
+    - name: Tarczaspritesheet3_1
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 2968
+        width: 1550
+        height: 1484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -64, y: 61.599365}
+        - {x: -64, y: -48.400635}
+        - {x: -58, y: -61.400635}
+        - {x: 48, y: -61.400635}
+        - {x: 64, y: -25.400635}
+        - {x: 64, y: 61.599365}
+    - name: Tarczaspritesheet3_2
+      rect:
+        serializedVersion: 2
+        x: 3100
+        y: 2968
+        width: 1550
+        height: 1484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -64, y: 61.599365}
+        - {x: -64, y: -48.400635}
+        - {x: -58, y: -61.400635}
+        - {x: 48, y: -61.400635}
+        - {x: 64, y: -25.400635}
+        - {x: 64, y: 61.599365}
+    - name: Tarczaspritesheet3_3
+      rect:
+        serializedVersion: 2
+        x: 4650
+        y: 2968
+        width: 1550
+        height: 1484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -64, y: 61.599365}
+        - {x: -64, y: -56.400635}
+        - {x: -47, y: -61.400635}
+        - {x: 51, y: -61.400635}
+        - {x: 64, y: -45.400635}
+        - {x: 64, y: 61.599365}
+    - name: Tarczaspritesheet3_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1484
+        width: 1550
+        height: 1484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -64, y: 62.549683}
+        - {x: -64, y: -30.450317}
+        - {x: -50, y: -61.450317}
+        - {x: 39, y: -61.450317}
+        - {x: 64, y: -22.450317}
+        - {x: 64, y: 62.549683}
+      - - {x: -34, y: 19.549683}
+        - {x: -25, y: 36.549683}
+        - {x: 29, y: 39.549683}
+        - {x: 0, y: -37.450317}
+      - - {x: -29, y: 40.549683}
+        - {x: -34, y: 39.549683}
+        - {x: -34, y: 24.549683}
+        - {x: -29, y: 20.549683}
+        - {x: -18, y: 20.549683}
+        - {x: -13, y: 24.549683}
+        - {x: -13, y: 34.549683}
+        - {x: -15, y: 40.549683}
+    - name: Tarczaspritesheet3_5
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 1484
+        width: 1550
+        height: 1484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -64, y: 62.549683}
+        - {x: -64, y: -30.450317}
+        - {x: -50, y: -61.450317}
+        - {x: 39, y: -61.450317}
+        - {x: 64, y: -22.450317}
+        - {x: 64, y: 62.549683}
+      - - {x: -34, y: 19.549683}
+        - {x: -25, y: 36.549683}
+        - {x: 29, y: 39.549683}
+        - {x: 0, y: -37.450317}
+      - - {x: -31, y: 38.549683}
+        - {x: -32, y: 34.549683}
+        - {x: -32, y: 29.549683}
+        - {x: -29, y: 23.549683}
+        - {x: -27, y: 22.549683}
+        - {x: -22, y: 22.549683}
+        - {x: -15, y: 27.549683}
+        - {x: -15, y: 38.549683}
+    - name: Tarczaspritesheet3_6
+      rect:
+        serializedVersion: 2
+        x: 3100
+        y: 1484
+        width: 1550
+        height: 1484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -60, y: 62.549683}
+        - {x: -60, y: -11.450317}
+        - {x: -29, y: -60.450317}
+        - {x: 32, y: -60.450317}
+        - {x: 60, y: -20.450317}
+        - {x: 60, y: 48.549683}
+        - {x: 53, y: 62.549683}
+      - - {x: -34, y: 19.549683}
+        - {x: -25, y: 36.549683}
+        - {x: 29, y: 39.549683}
+        - {x: 0, y: -37.450317}
+      - - {x: -31, y: 32.549683}
+        - {x: -27, y: 23.549683}
+        - {x: -19, y: 23.549683}
+        - {x: -17, y: 24.549683}
+        - {x: -17, y: 31.549683}
+        - {x: -21, y: 36.549683}
+        - {x: -26, y: 36.549683}
+    - name: Tarczaspritesheet3_7
+      rect:
+        serializedVersion: 2
+        x: 4650
+        y: 1484
+        width: 1550
+        height: 1484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -60, y: 62.549683}
+        - {x: -60, y: -11.450317}
+        - {x: -29, y: -60.450317}
+        - {x: 32, y: -60.450317}
+        - {x: 60, y: -20.450317}
+        - {x: 60, y: 48.549683}
+        - {x: 53, y: 62.549683}
+      - - {x: -27, y: 38.549683}
+        - {x: 21, y: 38.549683}
+        - {x: 32, y: 5.5496826}
+        - {x: 0, y: -36.450317}
+      - - {x: -27, y: 35.549683}
+        - {x: -30, y: 30.549683}
+        - {x: -30, y: 27.549683}
+        - {x: -26, y: 24.549683}
+        - {x: -22, y: 24.549683}
+        - {x: -17, y: 28.549683}
+        - {x: -18, y: 33.549683}
+        - {x: -21, y: 35.549683}
+    - name: Tarczaspritesheet3_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1550
+        height: 1484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44, y: 60.5}
+        - {x: -42, y: 60.5}
+        - {x: -53, y: 55.5}
+        - {x: -53, y: -12.5}
+        - {x: -48, y: -41.5}
+        - {x: -18, y: -55.5}
+        - {x: 21, y: -55.5}
+        - {x: 41, y: -34.5}
+        - {x: 53, y: -2.5}
+        - {x: 53, y: 48.5}
+      - - {x: -3, y: -34.5}
+        - {x: -34, y: 18.5}
+        - {x: 30, y: 40.5}
+        - {x: 29, y: -6.5}
+      - - {x: -28, y: 31.5}
+        - {x: -28, y: 26.5}
+        - {x: -25, y: 25.5}
+        - {x: -19, y: 25.5}
+        - {x: -18, y: 30.5}
+        - {x: -21, y: 34.5}
+        - {x: -25, y: 34.5}
+    - name: Tarczaspritesheet3_9
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 0
+        width: 1550
+        height: 1484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 43.5}
+        - {x: -35, y: -23.5}
+        - {x: -29, y: -37.5}
+        - {x: 17, y: -37.5}
+        - {x: 35, y: -32.5}
+        - {x: 35, y: 42.5}
+        - {x: 31, y: 43.5}
+    - name: Tarczaspritesheet3_10
+      rect:
+        serializedVersion: 2
+        x: 3100
+        y: 0
+        width: 1550
+        height: 1484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -43, y: 51.5}
+        - {x: -43, y: -31.5}
+        - {x: -11, y: -46.5}
+        - {x: 25, y: -46.5}
+        - {x: 43, y: -9.5}
+        - {x: 43, y: 51.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

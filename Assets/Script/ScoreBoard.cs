@@ -13,6 +13,12 @@ public class ScoreBoard : MonoBehaviour {
     public Text textLeft;
     public Text textRight;
     private List<Player> playersRef;
+    private Animator scoreBoardAnimator;
+
+    public void Start()
+    {
+        scoreBoardAnimator = GetComponent<Animator>();
+    }
 
     public float sliderValue
     {
@@ -70,11 +76,20 @@ public class ScoreBoard : MonoBehaviour {
         //only 2 players, later this method will be changed
         rightColor = playersRef[0].Color;
         leftColor = playersRef[1].Color;
+        setActivePlayerAnimation();
         
     }
     public void updateScoreBoard()
     {
         //only 2 players, later this method will be changed
         setScore(playersRef[1].Score, playersRef[0].Score);
+        setActivePlayerAnimation();
+    }
+    private void setActivePlayerAnimation()
+    {
+        if (playersRef[1].IsActive)
+            scoreBoardAnimator.SetTrigger("RightTurn");
+        else
+            scoreBoardAnimator.SetTrigger("LeftTurn");
     }
 }
