@@ -77,7 +77,6 @@ public class ScoreBoard : MonoBehaviour {
         rightColor = playersRef[0].Color;
         leftColor = playersRef[1].Color;
         setActivePlayerAnimation();
-        
     }
     public void updateScoreBoard()
     {

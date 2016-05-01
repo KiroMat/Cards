@@ -77,9 +77,10 @@ public class ManagerGame : MonoBehaviour
             case StateGame.PrepareRound:
                 MockCreatePlayers();
                 FillHandPlayers();
-                scoreBoard.initializeScoreBoard(ref players);
-                SelectTheFirstPlayer();
                 Area.InitializePlayers(ref players);
+                Area.UpdateScoreForPlayers();
+                SelectTheFirstPlayer();
+                scoreBoard.initializeScoreBoard(ref players);
 
                 CurrentState = StateGame.StartGame;
                 break;
