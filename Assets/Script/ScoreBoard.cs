@@ -86,9 +86,9 @@ public class ScoreBoard : MonoBehaviour {
     }
     private void setActivePlayerAnimation()
     {
-        if (playersRef[1].IsActive)
-            scoreBoardAnimator.SetTrigger("RightTurn");
-        else
-            scoreBoardAnimator.SetTrigger("LeftTurn");
+        if (playersRef[0].IsActive)
+            scoreBoardAnimator.SetBool("LeftActive",false);
+        else if(playersRef[1].IsActive)
+            scoreBoardAnimator.SetBool("LeftActive", true);
     }
 }

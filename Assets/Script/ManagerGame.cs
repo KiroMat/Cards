@@ -52,8 +52,6 @@ public class ManagerGame : MonoBehaviour
     public void EndMovePlayer()
     {
         Area.UpdateScoreForPlayers();
-        scoreBoard.updateScoreBoard();
-
         if (Area.IsFullArea())
             CurrentState = StateGame.EndGame;
 
@@ -61,6 +59,9 @@ public class ManagerGame : MonoBehaviour
             CurrentState = StateGame.PlayChallenger;
         else if(CurrentState == StateGame.PlayChallenger)
             CurrentState = StateGame.EndRound;
+
+        scoreBoard.updateScoreBoard();
+
     }
 
     void Start()
