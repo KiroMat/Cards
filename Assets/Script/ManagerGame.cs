@@ -24,6 +24,7 @@ public class ManagerGame : MonoBehaviour
     public GameObject HandPlayerTwo;
     public ScoreBoard scoreBoard;
     public WindowMessage windowMessage;
+    public Camera GameCamera;
 
     public GeneratorCards GenerateCards { get; set; }
 
@@ -66,6 +67,7 @@ public class ManagerGame : MonoBehaviour
 
     void Start()
     {
+        GameCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         CurrentState = StateGame.PrepareRound;
         GenerateCards = GameObject.FindGameObjectWithTag("CardGenerator").GetComponent<GeneratorCards>();
 
@@ -82,6 +84,7 @@ public class ManagerGame : MonoBehaviour
                 Area.UpdateScoreForPlayers();
                 SelectTheFirstPlayer();
                 scoreBoard.initializeScoreBoard(ref players);
+                GameCamera.SetScrollingBorders();
 
                 CurrentState = StateGame.StartGame;
                 break;

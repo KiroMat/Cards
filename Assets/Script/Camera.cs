@@ -7,7 +7,7 @@ public class Camera : MonoBehaviour {
     private float _ScrollSpeed = 80f;
     public float _ZoomSpeedFactor = 10f;
     public float _InitialZoom = -300;
-    private int _Border = 1;
+    private int _Border = 1; // border for scrolling camera with mouse close to borders
     public bool _BorderScrollingEnabled;
     public bool _ZoomScrollingEnabled = true;
     public bool _KeyboardCameraScrolling = true;
@@ -17,10 +17,17 @@ public class Camera : MonoBehaviour {
     private float _zoomInLimit = -200;
     private float _zoomOutLimit = -900;
     private Vector3 dragOrigin;
+    public GameObject boardPrefabForBorders;    //Here drop your GUI element that you want your camera to be locked onto
+    //camera bounds that it cannot cross while scrolling
+    private float borderXmax;
+    private float borderXmin;
+    private float borderYmax;
+    private float borderYmin;
 
     // Use this for initialization
     void Start() {
         transform.position = new Vector3(_InitialStartingX, _InitialStartingY, _InitialZoom);
+ 
     }
 
     // Update is called once per frame
@@ -62,17 +69,28 @@ public class Camera : MonoBehaviour {
     }
     private void CameraScrollingKeyboard()
     {
-        
-            var AxisX = Input.GetAxis("Horizontal");
-            var AxisY = Input.GetAxis("Vertical");
-            if (AxisX != 0)
+
+        var AxisX = Input.GetAxis("Horizontal");
+        var AxisY = Input.GetAxis("Vertical");
+        if (AxisX != 0)
+        {
+            if (AxisX > 0 && UnityEngine.Camera.main.ViewportToWorldPoint(new Vector3(1, 1, 0)).x < borderXmax || AxisX < 0 && UnityEngine.Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)).x > borderXmin)
             {
                 transform.Translate(Vector3.right * AxisX * 1000 * Time.deltaTime, Space.World);
             }
-            if (AxisY != 0)
+        }
+        if (AxisY != 0)
+        {
+            if (AxisY > 0 && UnityEngine.Camera.main.ViewportToWorldPoint(new Vector3(1, 1, 0)).y < borderYmax)
             {
                 transform.Translate(Vector3.up * AxisY * 1000 * Time.deltaTime, Space.World);
             }
+            else if (AxisY < 0 &&  UnityEngine.Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)).y > borderYmin)
+            {
+                transform.Translate(Vector3.up * AxisY * 1000 * Time.deltaTime, Space.World);
+            }
+        }
+        
     }
     private void BorderScrolling()
     {
@@ -95,20 +113,34 @@ public class Camera : MonoBehaviour {
                 transform.Translate(Vector3.up * _MoveSpeed * Time.deltaTime, Space.World);
             }
     }
+
     private void CameraDrag()
     {
-            if (Input.GetMouseButtonDown(1))
-            {
-                dragOrigin = Input.mousePosition;
-                return;
-            }
+        if (Input.GetMouseButtonDown(1))
+        {
+            dragOrigin = Input.mousePosition;
+            return;
+        }
 
-            if (!Input.GetMouseButton(1)) return;
+        if (!Input.GetMouseButton(1)) return;
+        Vector3 pos = Input.mousePosition - dragOrigin;
+        Vector3 move = new Vector3(pos.x * _MoveSpeed, pos.y * _MoveSpeed, 0);
+        if (move.x > 0 && UnityEngine.Camera.main.ViewportToWorldPoint(new Vector3(1, 1, 0)).x >= borderXmax  || move.x < 0 && UnityEngine.Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)).x <= borderXmin)
+            move.x = 0;
+        if (move.y > 0 && UnityEngine.Camera.main.ViewportToWorldPoint(new Vector3(1, 1, 0)).y >= borderYmax  || move.y < 0 && UnityEngine.Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)).y <= borderYmin)
+            move.y=0;
 
-            Vector3 pos = Input.mousePosition-dragOrigin;
-          //  Debug.Log("DragOrigin: "+dragOrigin+" mousePosition: "+Input.mousePosition+"DeltaVector: "+(pos));
-            Vector3 move = new Vector3(pos.x*_MoveSpeed, pos.y*_MoveSpeed, 0);
-            transform.Translate(move, Space.Self);
+        transform.Translate(move, Space.Self);
+    }
+
+    public void SetScrollingBorders()
+    {
+        int partofscreen = 8;
+        RectTransform tempRect = boardPrefabForBorders.GetComponent<RectTransform>();
+        borderXmax = tempRect.position.x+(tempRect.rect.width/2)+(Screen.width/partofscreen);
+        borderXmin = tempRect.position.x - (tempRect.rect.width / 2) - (Screen.width / partofscreen);
+        borderYmax = tempRect.position.y + (tempRect.rect.height / 2) + (Screen.height / partofscreen);
+        borderYmin = tempRect.position.x - (tempRect.rect.height / 2) - (Screen.height / partofscreen);
     }
 }
 
